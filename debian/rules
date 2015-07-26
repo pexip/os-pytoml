@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+PY2VERS := $(shell pyversions -s)
+PY3VERS := $(shell py3versions -s)
+
+%:
+	dh $@ --with python2,python3
+
+
+override_dh_auto_build:
+	set -e ; \
+	for python in $(PY2VERS) $(PY3VERS); do \
+		$$python setup.py build; \
+	done
+
+override_dh_auto_install:
+	set -e ; \
+	for python in $(PY2VERS); do \
+		$$python setup.py install --root=debian/python-pytoml --install-layout=deb; \
+	done
+	set -e ; \
+	for python in $(PY3VERS); do \
+		$$python setup.py install --root=debian/python3-pytoml --install-layout=deb; \
+	done
+

@@ -1,0 +1,2 @@
+version=3
+https://github.com/avakar/pytoml/releases /avakar/pytoml/archive/v(\d+\.\d+\.\d+)\.tar\.gz
