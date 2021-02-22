@@ -1,8 +1,9 @@
 Source: pytoml
 Section: python
 Priority: optional
-Maintainer: Luca Bruno <lucab@debian.org>
-Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Luca Bruno <lucab@debian.org>
+XSBC-Pexip-Original-Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 9), python-all, python3-all, dh-python, python-setuptools, python3-setuptools
 Standards-Version: 3.9.6
 X-Python-Version: >= 2.7
@@ -10,6 +11,7 @@ X-Python3-Version: >= 3.4
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pytoml/trunk/
 Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pytoml/trunk/
 Homepage: https://github.com/avakar/pytoml
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: python-pytoml
 Architecture: all
